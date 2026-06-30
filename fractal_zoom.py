@@ -144,7 +144,7 @@ class FractalZoom(BaseEffect):
         'Copper Bars',
         'Hexy Stars',
         'Plasma',
-        'Prism Lattice',
+        'Wormhole',
         'Audio Sine',
         'Tunnel',
         'Tron Grid',

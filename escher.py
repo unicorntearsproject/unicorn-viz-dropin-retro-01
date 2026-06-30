@@ -104,7 +104,7 @@ class Escher(BaseEffect):
         'Van Gogh',
         'Hexy Stars',
         'Particle Storm',
-        'Prism Lattice',
+        'Wormhole',
         'Psychedelic',
         'Audio Sine',
         'Tunnel',

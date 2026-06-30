@@ -126,7 +126,7 @@ class CopperBars(BaseEffect):
         'Hexy Stars',
         'Metaballs',
         'Particle Storm',
-        'Prism Lattice',
+        'Wormhole',
         'Psychedelic',
         'Starfield',
         'Tunnel',
