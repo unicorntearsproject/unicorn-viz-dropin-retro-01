@@ -116,7 +116,7 @@ void main() {
 class CopperBars(BaseEffect):
     NAME = "Copper Bars"
     AUTHOR = "unicorn-viz"
-    TAGS = ["classic", "amiga", "audio"]
+    TAGS = ["retro", "classic", "amiga"]
     PING_PONG_FRIENDS = [
         'Audio Sine',
         'Plasma',

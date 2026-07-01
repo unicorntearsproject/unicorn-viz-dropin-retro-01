@@ -117,7 +117,7 @@ void main() {
 class Dali(BaseEffect):
     NAME = "Dali"
     AUTHOR = "unicorn-viz"
-    TAGS = ["art", "surreal", "audio"]
+    TAGS = ["retro", "art", "surreal"]
     SPEED_TIME_BIAS = 0.35
     SPEED_TIME_SCALE = 0.75
     PING_PONG_FRIENDS = ['Escher', 'Van Gogh', 'Psychedelic', 'Unicorn Tears']

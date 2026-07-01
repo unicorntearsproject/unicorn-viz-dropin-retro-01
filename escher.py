@@ -97,7 +97,7 @@ void main() {
 class Escher(BaseEffect):
     NAME = "Escher"
     AUTHOR = "unicorn-viz"
-    TAGS = ["art", "optical", "audio"]
+    TAGS = ["retro", "art", "optical"]
     SPEED_TIME_BIAS = 0.35
     SPEED_TIME_SCALE = 0.8
     PING_PONG_FRIENDS = [

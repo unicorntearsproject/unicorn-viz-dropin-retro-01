@@ -136,7 +136,7 @@ _TARGETS = [
 class FractalZoom(BaseEffect):
     NAME = 'Fractal Zoom'
     AUTHOR = 'unicorn-viz'
-    TAGS = ['futuristic', 'audio', 'psychedelic']
+    TAGS = ['retro', 'futuristic', 'psychedelic']
     PING_PONG_FRIENDS = [
         'Kaleidoscope',
         'Psychedelic',
