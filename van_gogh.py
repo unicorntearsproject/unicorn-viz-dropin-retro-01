@@ -132,7 +132,7 @@ void main() {
 class VanGogh(BaseEffect):
     NAME = "Van Gogh"
     AUTHOR = "unicorn-viz"
-    TAGS = ["retro", "art", "shader"]
+    TAGS = ['retro', 'art', 'shader', 'groovy', 'energetic', 'intense']
     SPEED_TIME_BIAS = 0.3
     SPEED_TIME_SCALE = 0.8
     PING_PONG_FRIENDS = ['Dali', 'Escher', 'Psychedelic', 'Unicorn Tears']

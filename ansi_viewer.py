@@ -113,7 +113,7 @@ void main() {
 class ANSIViewer(BaseEffect):
     NAME = "ANSI Viewer"
     AUTHOR = "unicorn-viz"
-    TAGS = ["retro", "ansi", "classic"]
+    TAGS = ['retro', 'ansi', 'classic', 'groovy', 'intense']
     PING_PONG_FRIENDS: list[str] = []
 
     def _init(self) -> None:
