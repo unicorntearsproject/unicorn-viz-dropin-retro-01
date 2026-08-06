@@ -100,7 +100,11 @@ void main() {
     p = rot(-0.6 / (0.22 + d2 + 0.15 * iBass)) * p;
     p = rot(0.55 / (0.25 + d3 + 0.18 * iBass)) * p;
 
-    float n = fbm(p * (2.2 + iFlow * 0.9) + vec2(t * 0.3, -t * 0.2));
+    // tw: bounded time for hash/fbm inputs — unbounded t (start phase up
+    // to 10k) collapses the finest fbm octave and the star/streak hashes
+    // past float32's 2^23 (audit 2026-08-03 §8 Class B).
+    float tw = mod(t, 1024.0);
+    float n = fbm(p * (2.2 + iFlow * 0.9) + vec2(tw * 0.3, -tw * 0.2));
     float brush = abs(sin((n + p.x * 0.7 + p.y * 0.9 + sin(t * 0.4) * iFlow) * 28.0));
     brush = pow(1.0 - brush, 3.5 - iBass * 1.2);
 
@@ -115,8 +119,8 @@ void main() {
 
     // Stars + dynamic streaklets
     float star_thresh = 1.0 - iStarDensity * 3.0;
-    float stars = step(star_thresh, hash(floor((uv + vec2(t * (0.2 + iFlow * 0.2), 0.0)) * 120.0)));
-    float streak = smoothstep(0.995, 1.0, hash(floor((uv + vec2(-t * 0.12, t * 0.07)) * 170.0)));
+    float stars = step(star_thresh, hash(floor((uv + vec2(mod(t * (0.2 + iFlow * 0.2), 128.0), 0.0)) * 120.0)));
+    float streak = smoothstep(0.995, 1.0, hash(floor((uv + vec2(-mod(t * 0.12, 128.0), mod(t * 0.07, 128.0))) * 170.0)));
     col += vec3(1.0, 0.95, 0.75) * stars * (0.4 + iBeat * 0.7 + iTreble * 0.4);
     col += vec3(0.8, 0.9, 1.0) * streak * (0.05 + iTreble * 0.16);
     col += palette(t * 0.02 + iEra * 0.6 + n * 0.2 + iMood * 0.35) * (0.05 + iMood * 0.06) * iHueDrift;
