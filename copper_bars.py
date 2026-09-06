@@ -5,7 +5,6 @@ Audio-reactive: bass drives bar spread, beat flashes palette.
 """
 from __future__ import annotations
 
-import numpy as np
 import moderngl
 
 from unicornviz.effects.base import BaseEffect, AudioData
